@@ -51,7 +51,7 @@ const FetchfeedDataComponent = () => {
     <div className="overflow-y-auto h-100">
       {posts.length === 0 && <p>No posts yet.</p>}
       {posts.map((post) => (
-        <PostCardComponent post={post} />
+        <PostCardComponent post={post} key={post.id} />
       ))}
     </div>
   );
