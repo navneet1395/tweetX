@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js Firebase Twitter-Like Application
 
-## Getting Started
+## Project Overview
 
-First, run the development server:
+This project is a Twitter-like application built using Next.js and Firebase. Users can sign up, log in, post short messages (tweets), view their own posts, view other users, and follow/unfollow other users. The main features include:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- User Authentication (Sign Up, Login)
+- Posting Messages
+- Viewing User Posts
+- Following and Unfollowing Users
+- User Feed Display
+
+## Tech Stack
+
+- **Next.js**: A React framework for building server-side rendered applications.
+- **Firebase**: A platform by Google for developing mobile and web applications. Used here for authentication and database services.
+  - Firebase Auth: For user authentication.
+  - Firebase Firestore: For storing user data and posts.
+
+## Project Structure
+```
+└───app
+    ├───firebase
+    ├───home
+    │   ├───feed
+    │   ├───profile
+    │   └───users
+    ├───login
+    └───sign-up
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Setup and Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Prerequisites
 
-## Learn More
+- Node.js and npm/yarn installed on your machine.
+- Firebase project set up (you can create one at [Firebase Console](https://console.firebase.google.com/)).
 
-To learn more about Next.js, take a look at the following resources:
+### Installation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Clone the repository:**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   ```bash
+   git clone https://github.com/navneet1395/tweetx.git
+   cd tweetx
+   ```
+2. **Install Dependedecy**
+    ```bash
+    npm install
+     or
+    yarn install ```
+3. **Set up Firebase:**
 
-## Deploy on Vercel
+    By creating a .env file with the firebase keys 
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. **Run the development server:**
+    
+    ```bash
+    npm run dev
+    or
+    yarn dev
+     ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+    Open http://localhost:3000 with your browser to see the result.
+
+
+## Usage
+- Sign Up: Create a new account.
+- Log In: Access your account.
+- Post Messages: Write short posts.
+- View Posts: See your own posts and posts from users you follow.
+- Follow/Unfollow: Manage the users you follow.
+
+## Design Choices
+- Next.js
+    - Server-Side Rendering: Provides improved performance and SEO benefits.
+    - File-based Routing: Simplifies the creation of routes within the application.
+- Firebase
+    - Authentication: Provides secure and easy-to-use user authentication.
+    - Firestore: A flexible, scalable database for storing user data and posts.
+- React-Firebase-Hooks
+    -Used for integrating Firebase with React components, providing hooks for authentication and Firestore operations.
