@@ -3,31 +3,66 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 112, 112, 112;
+  --background: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background: 0, 0, 0;
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: #707070;
 }
 
-@layer utilities {
+.textPrimaryColor {
+  color: #ff738c;
+}
+/* @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+} */
+
+nav {
+  height: 10vh;
+  margin: 0;
+  padding: 1rem 3rem 1rem 3rem;
+}
+main {
+  height: 90vh;
+
+  margin: 0;
+  /* padding: 1rem 3rem 1rem 3rem; */
+}
+
+textarea,
+input {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 0.5rem;
+  width: 100%;
+}
+textarea :focus,
+input:focus {
+  border-color: #58626a; /* Change this to the desired color */
+}
+button {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+  padding: 0.25rem 1rem;
+  border-radius: 4px;
+}
+
+.button-primary {
+  background-color: #ff738c;
+  color: #f9f9f9;
+}
+/* Bordered button */
+.button-bordered {
+  border: 1px solid black;
 }
